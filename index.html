@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            xs: '376px',
+          },
+          extend: {
+            colors: {
+              desaturatedRed: 'hsl(0, 36%, 70%)',
+              softRed: 'hsl(0, 93%, 68%)',
+              darkGrayishRed: 'hsl(0, 6%, 24%)',
+              grad0: 'hsl(0, 0%, 100%)',
+              grad1: 'hsl(0, 100%, 98%)',
+              grad2: 'hsl(0, 80%, 86%)',
+              grad3: 'hsl(0, 74%, 74%)',
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+      html * {
+        font-family: 'Josefin Sans', sans-serif;
+        /* border: 1px solid green; */
+      }
+    </style>
+    <script src="script.js" defer></script>
+  </head>
+  <body class="bg-gradient-to-br from-grad0 to-grad1">
+    <div class="flex">
+      <div
+        class="flex flex-col justify-between xs:px-[13%] xs:pt-[4%] xs:pb-[8%] xs:bg-[url('./images/bg-pattern-desktop.svg')] bg-no-repeat bg-cover bg-center"
+      >
+        <div class="p-7">
+          <img src="./images/logo.svg" alt="" class="h-6 xs:h-8" />
+        </div>
+        <img src="./images/hero-mobile.jpg" alt="" class="xs:hidden" />
+        <div class="py-14 px-6 flex flex-col items-center space-y-8">
+          <h1
+            class="text-4xl uppercase tracking-[0.2em] text-center font-semibold xs:text-left xs:text-6xl"
+          >
+            <span class="font-light text-desaturatedRed">We're</span> coming
+            soon
+          </h1>
+          <p
+            class="text-center tracking-tight text-desaturatedRed xs:text-left"
+          >
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+          <form id="login-form" novalidate class="w-full relative">
+            <input
+              type="email"
+              id="email-input"
+              required
+              placeholder="Email Address"
+              class="py-3 px-6 w-full rounded-full bg-transparent border border-desaturatedRed/50 placeholder:text-desaturatedRed/50 focus-visible:outline-none"
+            />
+            <div class="absolute bottom-0 right-0 h-full flex items-center">
+              <img
+                id="error-icon"
+                src="images/icon-error.svg"
+                alt=""
+                class="mr-3 hidden"
+              />
+              <button
+                type="submit"
+                class="h-full bg-gray-100 flex justify-center items-center px-7 rounded-full bg-gradient-to-br from-grad2 to-grad3 shadow-xl shadow-grad3/50 xs:w-[92px] hover:from-grad2/70 hover:to-grad3/70 hover:shadow-grad3/70"
+              >
+                <img src="./images/icon-arrow.svg" alt="" />
+              </button>
+            </div>
+            <p
+              id="error-message"
+              class="absolute text-[#F96464] left-6 -bottom-8 hidden"
+            >
+              Please provide a valid email
+            </p>
+          </form>
+        </div>
+      </div>
+      <img src="./images/hero-desktop.jpg" alt="" class="max-[375px]:hidden" />
+    </div>
+  </body>
+</html>
